@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:statstade/View/ticket_view.dart';
 import 'package:statstade/constants/color_constants.dart';
 
 class HomeScreenT extends StatelessWidget {
@@ -55,6 +56,28 @@ class HomeScreenT extends StatelessWidget {
                     Text("Voir tout", style: Styles.textStyle.copyWith(color: Styles.primaryColor),)
                   ],
                 )
+              ],
+            ),
+          ),
+          const Gap(15),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(
+              children: [
+                TicketView(),
+                TicketView()
+              ],
+            ),
+          ),
+          const Gap(15),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("L'appartement", style: Styles.headLineStyle2,),
+                Text("Voir tout", style: Styles.textStyle.copyWith(color: Styles.primaryColor),)
               ],
             ),
           )
